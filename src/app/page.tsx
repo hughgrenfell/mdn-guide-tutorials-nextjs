@@ -7,7 +7,7 @@ export default function Home() {
       <div className="h-32 w-32 relative">
         <Image
           className="avatar-small"
-          src={"/Avatar.png"}
+          src={"Avatar.png"}
           fill={true}
           style={{
             objectFit: "contain",
