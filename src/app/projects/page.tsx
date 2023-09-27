@@ -4,7 +4,10 @@ export default function Projects() {
 
     return (
         <>
-            <Link href="/projects/animation-study">Animation Study</Link>
+            <ul>
+                <li><Link href="/projects/animation-study">Animation Study</Link></li>
+                <li><Link href="/projects/api-study/audio-study">Audio Study</Link></li>
+            </ul>
         </>
     )
 

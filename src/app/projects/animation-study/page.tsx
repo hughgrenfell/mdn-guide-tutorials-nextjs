@@ -1,20 +1,30 @@
-export default function AnimationStudy() {
+import { Metadata } from 'next';
+import style from './alicestyle.module.css';
+import SpinningAlice from './components/SpinningAlice';
 
-    const aliceTumbling = [
-        { transform: 'rotate(0) scale(1)' },
-        { transform: 'rotate(720deg) scale(0)' }
-    ];
-
-    const aliceTiming = {
-        duration: 2000,
-        iterations: 1,
-        fill: 'forwards'
+type Props = {
+    params : {
+        title: string,
+        description: string,
     }
+}
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+
+    return {
+        title: 'Animation Study',
+        description: 'NextJS interpretation of the Animation Study from MDN Guide',
+    };
+}
+
+export default function AnimationStudy({ params }: Props) {
+ 
     return (
-        <>
-            <div>This is where the animation study will live</div>
-        </>
+        <div className='flex flex-col'>
+            <h1>Animation Study - Spinning Alice</h1>
+            <div className={style.body}>
+                <SpinningAlice />
+            </div>
+        </div>
     )
-
 }

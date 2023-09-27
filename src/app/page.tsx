@@ -18,7 +18,8 @@ export default function Home() {
         />
       </div>
       <div>
-        This is a very simple nextJS app to display the output of the MDN tutorials as I work through them and to experiment with nextJS.
+        This is a simple site to practice NextJS and display the output of the MDN Guide Tutorials. The tutorials have been converted from Vanilla JS and CSS to 
+        next JS and tailwind. 
       </div>
     </>
 
