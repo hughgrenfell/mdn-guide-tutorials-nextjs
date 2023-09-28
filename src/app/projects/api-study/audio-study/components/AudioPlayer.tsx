@@ -2,7 +2,11 @@
 
 import { useState, useRef } from 'react';
 
-export default function AudioPlayer() {
+type Props = {
+    fileName: string,
+}
+
+export default function AudioPlayer({ fileName }: Props) {
 
     const [isPlaying, setIsPlaying] = useState('Play');
     const audioRef = useRef<HTMLAudioElement>(null);
@@ -26,7 +30,7 @@ export default function AudioPlayer() {
 
     return (
         <div>
-            <audio src="/audio/outfoxing.mp3" ref={audioRef}></audio>
+            <audio src={fileName} ref={audioRef}></audio>
             <br/>
             <button className="paused" onClick={play}>{isPlaying}</button>
             <br/>

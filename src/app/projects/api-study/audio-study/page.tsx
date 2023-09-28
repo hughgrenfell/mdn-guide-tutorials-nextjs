@@ -6,6 +6,7 @@ type Props = {
         title: string,
         description: string,
     }
+    fileName : string;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -22,7 +23,7 @@ export default function AudioStudy() {
         <div>
             <div>
                 <h1>Audio Study from MDN Guide Tutorials</h1>
-                <AudioPlayer />
+                <AudioPlayer fileName = "/audio/outfoxing.mp3"/>
             </div>
         </div>
     )
