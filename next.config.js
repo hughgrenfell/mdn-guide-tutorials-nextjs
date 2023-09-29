@@ -4,11 +4,11 @@ module.exports = (phase, { defaultConfig }) => {
     if (phase === PHASE_DEVELOPMENT_SERVER) {
         return {
             output: "export",
+            images: { unoptimized: true },
         }
     }
 
     return {
-        output: "export",
-        images: { unoptimized: true },
+        
     }
 }
