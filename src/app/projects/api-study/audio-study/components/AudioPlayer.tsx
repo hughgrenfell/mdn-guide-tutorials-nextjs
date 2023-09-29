@@ -13,6 +13,7 @@ export default function AudioPlayer({ fileName }: Props) {
     const volumeRef = useRef<HTMLInputElement>(null);
 
     function play() {
+        console.log('fileName');
         if (isPlaying === 'Play') {
             setIsPlaying('Pause');
             audioRef.current?.play();
