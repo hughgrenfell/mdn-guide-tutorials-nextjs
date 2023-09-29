@@ -9,7 +9,6 @@ module.exports = (phase, { defaultConfig }) => {
     }
 
     return {
-        output: "export",
         images: { unoptimized: true },
     }
 }
