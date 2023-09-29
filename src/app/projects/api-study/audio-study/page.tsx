@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function AudioStudy() {
+export default function AudioStudy({ params }: Props) {
 
     return (
         <div>
