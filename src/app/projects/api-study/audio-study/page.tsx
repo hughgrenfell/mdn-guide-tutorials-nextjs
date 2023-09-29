@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import AudioPlayer from './components/audioPlayer';
+import AudioPlayer from './components/AudioPlayer';
 
 type Props = {
     params : {
