@@ -5,8 +5,7 @@ type Props = {
     params : {
         title: string,
         description: string,
-    },
-    fileName : string,
+    };
 }
 
 const fileName = "/audio/outfoxing.mp3";
