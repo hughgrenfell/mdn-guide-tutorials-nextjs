@@ -1,7 +1,14 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    output: "export",
-    //images: { unoptimized: true },
-}
+const { PHASE_DEVELOPMENT_SERVER } = require('next/constants')
 
-module.exports = nextConfig
+module.exports = (phase, { defaultConfig }) => {
+    if (phase === PHASE_DEVELOPMENT_SERVER) {
+        return {
+
+        }
+    }
+
+    return {
+        output: "export",
+        images: { unoptimized: true },
+    }
+}
