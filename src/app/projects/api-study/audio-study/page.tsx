@@ -1,38 +1,30 @@
-'use client'
+import { Metadata } from 'next';
+import AudioPlayer from "./components/AudioPlayer";
 
-import { useState, useRef } from 'react';
+type Props = {
+    params : {
+        title: string,
+        description: string,
+    }
+}
+
+const fileName = "/audio/outfoxing.mp3";
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+
+    return {
+        title: 'Audio Study',
+        description: 'NextJS interpretation of the Audio Study from MDN Guide',
+    };
+}
 
 export default function AudioStudy() {
-
-    const [isPlaying, setIsPlaying] = useState('Play');
-    const audioRef = useRef<HTMLAudioElement>(null);
-    const volumeRef = useRef<HTMLInputElement>(null);
-
-    function play() {
-        if (isPlaying === 'Play') {
-            setIsPlaying('Pause');
-            audioRef.current?.play();
-        } else {
-            setIsPlaying('Play');
-            audioRef.current?.pause();
-        }
-    }
-
-    function slideVolume() {
-        if(!!audioRef.current && !!volumeRef.current) {
-            audioRef.current.volume = Number(volumeRef.current.value);
-        }
-    }
 
     return (
         <div>
             <div>
                 <h1>Audio Study from MDN Guide Tutorials</h1>
-                <audio src="/audio/outfoxing.mp3" ref={audioRef}></audio>
-                <br/>
-                <button className="paused" onClick={play}>{isPlaying}</button>
-                <br/>
-                <input title="volume-controller" type="range" ref={volumeRef} min="0" max="1" step="0.01" defaultValue="1" className="volume" onChange={slideVolume}/>
+                <AudioPlayer fileName={fileName}/>
             </div>
         </div>
     )
