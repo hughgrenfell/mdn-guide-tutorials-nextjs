@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import AudioPlayer from "./components/AudioPlayer";
+import audioFile from "../../../../../public/audio/outfoxing.mp3";
 
 type Props = {
     params : {
@@ -26,10 +27,8 @@ export default function AudioStudy() {
                 <h1>Audio Study from MDN Guide Tutorials</h1>
                 <AudioPlayer fileName={fileName}/>
             </div>
-            <audio controls>
-                <source src="../../../../audio/outfoxing.mp3" type="audio/mpeg" />
-                Your browser does not support the audio tag.
-            </audio>
+            <br />
+            <audio controls src="/audio/outfoxing.mp3" />
         </div>
     )
 }
