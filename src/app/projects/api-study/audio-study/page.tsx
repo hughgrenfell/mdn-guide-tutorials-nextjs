@@ -26,6 +26,10 @@ export default function AudioStudy() {
                 <h1>Audio Study from MDN Guide Tutorials</h1>
                 <AudioPlayer fileName={fileName}/>
             </div>
+            <audio controls>
+                <source src={fileName} type="audio/mpeg" />
+                Your browser does not support the audio tag.
+            </audio>
         </div>
     )
 }
