@@ -8,7 +8,7 @@ type Props = {
     }
 }
 
-const fileName = "/audio/outfoxing.mp3";
+const fileName = "/outfoxing.mp3";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
