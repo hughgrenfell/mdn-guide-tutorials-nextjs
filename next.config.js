@@ -1,11 +1,11 @@
 const compose = require('next-compose');
 
 /** @type {import('next').NextConfig} */
-const nextConfig = compose ([
+const nextConfig = 
   {
     output: "export",
     images: { unoptimized: true },
-    webpack(config, options) {
+    webpack(config) {
       config.module.rules.push({
         test: /\.mp3?$/,
         use: {
@@ -20,7 +20,6 @@ const nextConfig = compose ([
       });
       return config;
     }
-  },
-]);
+  };
    
   module.exports = nextConfig
