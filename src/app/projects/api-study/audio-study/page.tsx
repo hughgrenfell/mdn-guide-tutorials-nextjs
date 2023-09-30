@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import AudioPlayer from "./components/AudioPlayer";
-import audioFile from "../../../../../public/audio/outfoxing.mp3";
+import audioFile from '../../../../../public/audio/outfoxing.mp3';
 
 type Props = {
     params : {
@@ -29,6 +29,8 @@ export default function AudioStudy() {
             </div>
             <br />
             <audio controls src="/audio/outfoxing.mp3" />
+            <br />
+            <audio controls src={audioFile} />
         </div>
     )
 }
