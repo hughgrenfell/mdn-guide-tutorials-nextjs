@@ -11,8 +11,8 @@ const nextConfig =
         use: {
           loader: 'file-loader',
           options: {
-            publicPath: '/_next/static/audio/',
-            outputPath: 'static/audio/',
+            publicPath: '/mdn-guide-tutorials-nextjs/_next/static/media/',
+            outputPath: 'static/media/',
             name: '[name].[ext]',
             esModule: false,
           }
