@@ -8,7 +8,7 @@ type Props = {
     }
 }
 
-const fileName = "/outfoxing.mp3";
+const fileName = "/audio/outfoxing.mp3";
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
@@ -27,7 +27,7 @@ export default function AudioStudy() {
                 <AudioPlayer fileName={fileName}/>
             </div>
             <audio controls>
-                <source src={fileName} type="audio/mpeg" />
+                <source src="../../../../audio/outfoxing.mp3" type="audio/mpeg" />
                 Your browser does not support the audio tag.
             </audio>
         </div>
