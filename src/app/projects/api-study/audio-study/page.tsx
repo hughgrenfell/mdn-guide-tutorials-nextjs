@@ -26,6 +26,7 @@ export default function AudioStudy() {
                 <AudioPlayer fileName={audioFile}/>
             </div>
             <audio controls src={audioFile} />
+            <audio controls src="/audio/outfoxing.mp3" />
         </div>
     )
 }
