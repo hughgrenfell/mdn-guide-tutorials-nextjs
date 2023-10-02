@@ -9,8 +9,6 @@ type Props = {
     }
 }
 
-const fileName = "/audio/outfoxing.mp3";
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
     return {
@@ -27,6 +25,7 @@ export default function AudioStudy() {
                 <h1>Audio Study from MDN Guide Tutorials</h1>
                 <AudioPlayer fileName={audioFile}/>
             </div>
+            <audio controls src={audioFile} />
         </div>
     )
 }
