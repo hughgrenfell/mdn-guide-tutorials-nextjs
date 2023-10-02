@@ -1,7 +1,6 @@
 'use client'
 
 import { useState, useRef } from 'react';
-import audioFile from "../../../../../../public/audio/outfoxing.mp3";
 
 type Props = {
     fileName: string,
@@ -34,10 +33,7 @@ export default function AudioPlayer({ fileName }: Props) {
             <br/>
             <button className="paused" onClick={play}>{isPlaying}</button>
             <br/>
-            <input title="volume-controller" type="range" ref={volumeRef} min="0" max="1" step="0.01" defaultValue="1" className="volume" onChange={slideVolume}/>
-            <br />
-            <audio controls src={audioFile} >
-            </audio>   
+            <input title="volume-controller" type="range" ref={volumeRef} min="0" max="1" step="0.01" defaultValue="1" className="volume" onChange={slideVolume}/>  
         </div>
     )
 }
