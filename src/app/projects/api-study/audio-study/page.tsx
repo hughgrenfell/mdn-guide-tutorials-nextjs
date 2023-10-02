@@ -25,7 +25,9 @@ export default function AudioStudy() {
                 <h1>Audio Study from MDN Guide Tutorials</h1>
                 <AudioPlayer fileName={audioFile}/>
             </div>
+            <br />
             <audio controls src={audioFile} />
+            <br />
             <audio controls src="/audio/outfoxing.mp3" />
         </div>
     )
